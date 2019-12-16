@@ -1,0 +1,29 @@
+<h2>Add a new word</h2>
+
+<%=
+  form_for :word, '/words', class: 'word-form' do
+    div class: 'input' do
+      label 'English', for: :en
+      text_field :en
+    end
+
+    div class: 'input' do
+      label 'Japanese', for: :ja
+      text_field :ja
+    end
+
+    div class: 'input' do
+      label 'Hiragana', for: :kana
+      text_field :kana
+    end
+
+    div class: 'input' do
+      label 'Romaji', for: :romaji
+      text_field :romaji
+    end
+
+    div class: 'controls' do
+      submit 'Create Word'
+    end
+  end
+%>
