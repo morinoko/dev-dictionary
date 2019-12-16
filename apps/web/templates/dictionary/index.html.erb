@@ -1,21 +1,14 @@
- <section class="index">
-  <h2 class="letter">A</h2>
-  <h3>Array</h3>
-  <p>配列（はいれつ） hairetsu</p>
-
-  <h3>Authentication</h3>
-  <p>認証（にんしょう） ninshō</p>
-  <ul>
-    <li>E.g. Who are you? Are you who you say you are? Logging in with password, etc.</li>
-  </ul>
-
-  <h3>Authorization</h3>
-  <p>権限管理（けんげん かんり） kengen kanri</p>
-  <ul>
-    <li>E.g. Can you do that? Roles (admin vs. regular user), etc.</li>
-  </ul>
-
-  <h2 class="letter">F</h2>
-  <h3>Function</h3>
-  <p>関数（かんすう） kansū</p>
+<section class="index">
+  <% if words.any? %>
+    <% words.each do |word| %>
+      <div class="word">
+        <h3 class="word__en"><%= word.en %></h3>
+        <p class="word__ja"><%= word.ja %></p>
+        <p class="word_kana"><%= word.kana %></p>
+        <p class="word_romaji"><%= word.romaji %></p>
+      </div>
+    <% end %>
+  <% else %>
+    <p class="placeholder">There are no dictionary entries yet.</p>
+  <% end %>
 </section> 
