@@ -1,4 +1,6 @@
 <section class="index">
+  <%= link_to 'Add new word', routes.new_word_path %>
+
   <% if words.any? %>
     <% words.each do |word| %>
       <div class="word">
