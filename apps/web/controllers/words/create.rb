@@ -19,7 +19,7 @@ module Web
           if params.valid?
             @word = WordRepository.new.create(params[:word])
 
-            redirect_to '/'
+            redirect_to routes.root_path
           else
             self.status = 422
           end

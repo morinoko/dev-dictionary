@@ -12,7 +12,7 @@
 <% end %>
 
 <%=
-  form_for :word, '/words', class: 'word-form' do
+  form_for :word, routes.words_path, class: 'word-form' do
     div class: 'input' do
       label 'English', for: :en
       text_field :en
