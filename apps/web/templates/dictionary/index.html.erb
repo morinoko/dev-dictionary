@@ -4,10 +4,10 @@
   <% if words.any? %>
     <% words.each do |word| %>
       <div class="word">
-        <h3 class="word__en"><%= word.en %></h3>
-        <p class="word__ja"><%= word.ja %></p>
-        <p class="word_kana"><%= word.kana %></p>
-        <p class="word_romaji"><%= word.romaji %></p>
+        <h3 class="word__en"><%= link_to word.en, routes.edit_word_path(word.id) %></h3>
+        <span class="word__ja"><%= word.ja %></span> | 
+        <span class="word_kana"><%= word.kana %></span> | 
+        <span class="word_romaji"><%= word.romaji %></span>
       </div>
     <% end %>
   <% else %>
